@@ -78,6 +78,19 @@ namespace util
          }
       };
 
+      // less is a total order, but no further assumptions should be 
+      // made. The order can be different between different runs.
+
+      struct less
+      {
+         less( ) = default;
+  
+         bool operator( ) ( const normalized& n1, const normalized& n2 ) const
+         {
+            return & *n1.p < & *n2.p;
+         }
+      };
+
       // So that we can enumerate all Keys that we know about. 
 
       static indextype::const_iterator all_begin( ) 

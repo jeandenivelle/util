@@ -7,6 +7,7 @@
 #define UTIL_NORMALIZED_ 1 
 
 #include <unordered_set>
+#include <unordered_map>
 
 namespace util
 {
@@ -80,6 +81,7 @@ namespace util
 
       // less is a total order, but no further assumptions should be 
       // made. The order can be different between different runs.
+      // It should be used with care.
 
       struct less
       {
@@ -97,6 +99,10 @@ namespace util
          { return getindex( ). begin( ); } 
       static indextype::const_iterator all_end( ) 
          { return getindex( ). end( ); } 
+
+      template< typename V > 
+      using unordered_map = std::unordered_map< normalized<K,H,E>,
+                            V, hash, equal_to > ;
    };
 
 

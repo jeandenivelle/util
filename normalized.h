@@ -21,7 +21,7 @@ namespace util
    {
       using indextype = std::unordered_set<K,H,E> ;
 
-      indextype :: const_iterator p;
+      typename indextype :: const_iterator p;
 
    private:
       static indextype& getindex( ) 
@@ -95,9 +95,9 @@ namespace util
 
       // So that we can enumerate all Keys that we know about. 
 
-      static indextype::const_iterator all_begin( ) 
+      static typename indextype::const_iterator all_begin( ) 
          { return getindex( ). begin( ); } 
-      static indextype::const_iterator all_end( ) 
+      static typename indextype::const_iterator all_end( ) 
          { return getindex( ). end( ); } 
 
       template< typename V > 

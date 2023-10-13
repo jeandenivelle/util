@@ -9,6 +9,7 @@
 #include <stdexcept>
 #include <string>
 #include <string_view>
+#include <cstdint>
 
 // #include "util/dyn_vector.h"
 

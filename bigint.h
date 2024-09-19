@@ -1,8 +1,9 @@
 
 // Written by Hans de Nivelle, July 2011.
+// Rewritten summer 2022.
 
 #ifndef BIGINT_
-#define BIGINT_  1
+#define BIGINT_   
 
 #include <iostream> 
 #include <vector> 
@@ -10,8 +11,6 @@
 #include <string>
 #include <string_view>
 #include <cstdint>
-
-// #include "util/dyn_vector.h"
 
 class bigint
 {

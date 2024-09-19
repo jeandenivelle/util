@@ -103,6 +103,11 @@ namespace util
       template< typename V > 
       using unordered_map = std::unordered_map< normalized<K,H,E>,
                             V, hash, equal_to > ;
+
+      template< typename V >
+      using unordered_multimap = std::unordered_multimap< normalized<K,H,E>,
+                                 V, hash, equal_to > ;
+
    };
 
 

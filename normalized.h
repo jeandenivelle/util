@@ -108,8 +108,10 @@ namespace util
       using unordered_multimap = std::unordered_multimap< normalized<K,H,E>,
                                  V, hash, equal_to > ;
 
-   };
+      using unordered_set = 
+         std::unordered_set< normalized<K,H,E>, hash, equal_to > ;
 
+   };
 
    template< typename K, typename H, typename E > 
    inline 
